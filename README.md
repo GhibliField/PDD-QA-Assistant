@@ -91,6 +91,7 @@ If you want a better result, to paste the code in `run_cocurrent.py` or `run_par
 ### TODO
 :black_square_button: History query match  
 :black_square_button: Negative words detection. Probably see [Negative Words Dictionary](https://github.com/guotong1988/chinese_dictionary/blob/master/dict_negative.txt)
+:black_square_button: GUI
    
 
 ### Contribution

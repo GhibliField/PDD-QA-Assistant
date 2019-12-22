@@ -7,14 +7,14 @@ class Config(object):
     USE_PROXY = True
     IP_POOL = []
     # if IP_POOL　is empty, using api below to get proxies
-    IP_PROXY_API = 'http://piping.mogumiao.com/proxy/api/get_ip_al?appKey=ad2e969e5ea04319b48925d71da7d11c&count=1&expiryDate=0&format=1&newLine=2'
+    IP_PROXY_API = '***'
 
     # for screen adaption
     END = 'app'  # wechat: when you're using the mini program in wechat
 
-    OCR_APP_ID = '17859444'
-    OCR_API_KEY = 'GuWZvG6oRAjetdShEDVZmvEH'
-    OCR_SECRET_KEY = 'rQB7R3FxE5tcdwfkkftPo0Tz7nl1yGS6'
+    OCR_APP_ID = '***'
+    OCR_API_KEY = '***'
+    OCR_SECRET_KEY = '***'
     OCR_OPTIONS = {}
     OCR_OPTIONS["recognize_granularity"] = "big"
     OCR_OPTIONS["language_type"] = "CHN_ENG"

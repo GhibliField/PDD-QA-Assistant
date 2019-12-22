@@ -5,7 +5,7 @@
 # PDD-QA-Assistant
 
 ![](https://img.shields.io/badge/python-v3.5-blue?style=plastic) ![](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen)  
-![](https://img.shields.io/badge/platform-linux--64%20%7C%20win--32%20%7C%20win--64-lightgrey)
+![](https://img.shields.io/badge/platform-linux%20%7C%20win-lightgrey)
 
 ### Description
 
@@ -48,6 +48,11 @@ sudo apt install python3-pip python3-dev
 sudo pip install -r requirements.txt
 ```
 
+adb is necessary to the connection between your Android phone and your computer.
+
+```bash
+sudo apt-get install android-tools-adb
+```
 
 ### Configuration
 

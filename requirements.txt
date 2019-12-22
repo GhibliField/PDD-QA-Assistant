@@ -1,0 +1,8 @@
+nltk==3.2.5
+baidu_aip==2.2.18.0
+aiohttp==3.6.2
+fake_useragent==0.1.11
+requests==2.18.4
+zhon==1.1.5
+beautifulsoup4==4.8.1
+Pillow==6.2.1

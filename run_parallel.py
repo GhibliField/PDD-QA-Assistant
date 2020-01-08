@@ -41,21 +41,25 @@ def run():
         else:
             print('-'*25)
             b = list(zip(*[q.get() for i in range(len(Config.SITES))]))
-            prob_left, prob_right = list(map(lambda x: x/sum(map(sum, b)), map(sum, b)))
-            if prob_left == prob_right:
-                print('{}\t\t{}'.format("***", '综合'))  # 高低计数相等,此方法失效！
-            elif prob_left > prob_right:
-                if '不是' in question or '不属于' in question or '不包' in question or ('未' in question and '未来' not in question):
-                    # print('**请注意此题为否定题,选计数最少的**')
-                    print('{} {:.2%}\t{}'.format(option_right, prob_left, '综合'))
-                else:
-                    print('{} {:.2%}\t{}'.format(option_left, prob_left, '综合'))
+            try:
+                prob_left, prob_right = list(map(lambda x: x/sum(map(sum, b)), map(sum, b)))
+            except:
+                print('{}\t\t{}'.format("---", '综合'))
             else:
-                if '不是' in question or '不属于' in question or '不包' in question or ('未' in question and '未来' not in question):
-                    # print('**请注意此题为否定题,选计数最少的**')
-                    print('{} {:.2%}\t{}'.format(option_left, prob_right, '综合'))
+                if prob_left == prob_right:
+                    print('{}\t\t{}'.format("***", '综合'))  # 高低计数相等,此方法失效！
+                elif prob_left > prob_right:
+                    if '不是' in question or '不属于' in question or '不包' in question or ('未' in question and '未来' not in question):
+                        # print('**请注意此题为否定题,选计数最少的**')
+                        print('{} {:.2%}\t{}'.format(option_right, prob_left, '综合'))
+                    else:
+                        print('{} {:.2%}\t{}'.format(option_left, prob_left, '综合'))
                 else:
-                    print('{} {:.2%}\t{}'.format(option_right, prob_right, '综合'))
+                    if '不是' in question or '不属于' in question or '不包' in question or ('未' in question and '未来' not in question):
+                        # print('**请注意此题为否定题,选计数最少的**')
+                        print('{} {:.2%}\t{}'.format(option_left, prob_right, '综合'))
+                    else:
+                        print('{} {:.2%}\t{}'.format(option_right, prob_right, '综合'))
     else:
         print('--- BROWSWER ONLY ---')
 # HOW-TO-RUN: shell> run()

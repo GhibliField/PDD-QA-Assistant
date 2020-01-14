@@ -63,6 +63,8 @@ def get_info(ocr, img=None):
         info['type'] = 'yesno'
     else:
         info['type'] = 'factoid'
+
+    get_answer_by_browser(question)
     return info
 
 
@@ -78,9 +80,9 @@ def get_ips():
         return Config.IP_POOL
 
 
-def get_answer_by_browser(qa_info):
+def get_answer_by_browser(question):
     webbrowser.open(
-        'https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd={}&rqlang=cn&rsv_enter=1&rsv_dl=tb&rsv_sug3=41&rsv_sug2=0&rn=20'.format(qa_info['question']))
+        'https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd={}&rqlang=cn&rsv_enter=1&rsv_dl=tb&rsv_sug3=41&rsv_sug2=0&rn=20'.format(question))
 
 
 def search(queue, question, option_left, option_right, bigrm_left, bigrm_right, site, headers, proxies):
@@ -197,7 +199,7 @@ if __name__ == '__main__':
     else:
         print('*Program ready*')
 
-    qa_info = get_info(client, img='img/screenshot_1576900452.png')
+    qa_info = get_info(client, img='/home/d0main/wyshen/MyProject/PDD-QA-Assistant/img/screenshot_1578496931.png')
     # qa_info=get_info(client)
 
     question = qa_info['question']

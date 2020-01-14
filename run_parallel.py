@@ -23,7 +23,7 @@ def run():
     question = qa_info['question']
     option_left = qa_info['answer_left']
     option_right = qa_info['answer_right']
-    get_answer_by_browser(qa_info)
+    # get_answer_by_browser(qa_info)
     if qa_info['type'] == 'factoid':
         bigrm_left = list(map(''.join, nltk.bigrams(option_left)))
         bigrm_right = list(map(''.join, nltk.bigrams(option_right)))

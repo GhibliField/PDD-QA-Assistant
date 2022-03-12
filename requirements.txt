@@ -5,4 +5,4 @@ fake_useragent==0.1.11
 requests==2.18.4
 zhon==1.1.5
 beautifulsoup4==4.8.1
-Pillow==6.2.1
+Pillow==9.0.1
